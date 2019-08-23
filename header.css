@@ -1,0 +1,276 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body{
+    font-family: Roboto,sans-serif;
+}
+
+/* 
+    Setting outline border to none when element is focused
+*/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/*
+    Header Sections
+*/
+
+.top-header{
+    height : 65px;
+    background-color: #333545;
+    display: flex;
+    color: #999;
+}
+
+.logo{
+    height : 38px;
+    display: inline-block;
+    margin:11px 7px;
+    margin-left: 212px;
+}
+
+.search-box{
+    display: flex;
+    width: 36.5%;
+    margin : auto 10px;
+    margin-left: 9px;
+}
+
+.icon-outer{
+    height:28px;
+    background-color: white;
+    border-radius: 4px 0 0 4px;
+    padding: 4px 10px 4px 10px;
+}
+
+.search-icon{
+    width:12px;
+    height:15px;
+    background-color: white;
+    margin-top:6px; 
+}
+
+.search-input{
+    background-color: white;
+    width:85%;
+    height:34px;
+    display: inline-block;
+    border-radius: 0px 4px 4px 0px;
+    border: 0px;
+    font-family: Roboto,sans-serif!important;
+    font-size: 14px;
+    font-weight: 150;
+}
+
+
+.header-selectors{
+    margin: auto 10%;
+    margin-right: 25px; 
+}
+
+.city-selector ,
+.language-selector{
+    font-size: 14px;
+    color:#ccc;
+    margin: 0 8px;
+    font-weight: 150;
+    text-decoration: none;
+}
+
+.language-selector{
+    margin-left: 25px;
+}
+
+.header-selectors a:hover{
+    color:white;
+}
+
+.down-arrow{
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid white;
+    vertical-align: middle;
+}
+
+.sign-in{
+    margin-left: 15px;
+    color: white;
+    border: 1px solid white; 
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 150;
+    text-decoration: none;
+}
+
+.right-tab{
+    display: flex;
+    flex-flow: column;
+    margin: auto 8px;
+}
+
+.horizontal-line{
+    height: 2px;
+    width: 20px;
+    border-bottom: 1px solid white; 
+    margin: 1px;
+}
+
+/*
+    search-icon using div and transform only
+*/
+div.line {
+    width: 65%;
+    height: 2px;
+    background-color: #999;
+    -ms-transfom: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari 3-8 */
+    transform-origin:left;
+    transform: rotate(45deg);
+    position:absolute;
+    top:70%;
+    left:70%;
+  }
+  
+  div.circle{
+      height: 65%;
+      width: 65%;
+      border-radius : 50%;
+      border: 2px solid #999;
+  }
+  
+  div.search-icon{
+      width : 12px;
+      height : 12px;
+      background-color:white;
+      position:relative;
+      top:1px;
+      left:0px;
+  }
+
+.bottom-header{
+    height:40px;
+    background-color: #1f2533;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container{
+    margin: auto 0;
+    margin-left: 12.5%;
+}
+
+.other-selector{
+    font-size: 14px;
+    color:#ccc;
+    font-weight: 150;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+a.other-selector:hover{
+    color:white;
+}
+
+.right-container{
+    margin: auto 0;
+    margin-right: 12.5%;
+}
+
+.right-selector{
+    font-size: 12px;
+    color: rgba(255,255,255,.5);
+    font-weight: 150;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+a.right-selector:hover{
+    color:white;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    background-image: url("assets/images/movie-cover3.jpeg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 2s;
+}
+
+.youtube-frame{
+    display: flex;
+    align-items: center;
+}
+
+.youtube-frame iframe{
+    margin: 10vh auto;
+}
+
+
+

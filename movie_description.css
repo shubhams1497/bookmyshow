@@ -1,0 +1,395 @@
+.movie-cover{
+    height:370px;
+    width: 100%;
+    background-color: gray;
+    background-image: url("assets/images/movie-cover3.jpeg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+} 
+
+.outer-play-button{
+    display: inline-block;
+    margin: 140px 47vw 0 47vw;
+    cursor: pointer;
+}
+
+.play-button{
+    height: 3.7vw;
+    width: 3.7vw;
+    margin: auto;
+    border: 4px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 1.0vw solid transparent;
+    border-bottom: 1.0vw solid transparent;
+    border-left: 1.4vw solid#ccc;
+    margin: auto;
+    margin-left: 1.3vw;
+}
+
+.outer-play-button:hover > .play-button {
+	-ms-transform-origin: center;
+  -webkit-transform-origin: center;
+  transform-origin: center; 
+    -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari prior 9.0 */
+  transform: scalee(1.1); /* Standard syntax */
+  border-color: white;  
+  transition: all 0.3s ease;
+}
+
+.outer-play-button:hover  .arrow-right {
+    border-left-color: white;
+}
+
+.movie-poster{
+    display: inline-block;
+    margin-left: 150px;
+    margin-right: 10px; 
+}
+
+.movie-info{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.movie-name h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin: 12px 0 0 25px;
+}
+
+.movie-language{
+    display: flex;
+    margin: 12px 0 10px 25px;
+    align-items: center;
+}
+
+.UA-certificate{
+    width: 30px;
+    height: 30px;
+}
+
+.movie-language a{
+    font-size: 12px;
+    color:#ddd;
+    font-weight: 150;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.movie-genre a{
+    font-size: 12px;
+    color:#ddd;
+    font-weight: 150;
+    text-decoration: none;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 11px;
+}
+
+.movie-genre{
+    display: flex;
+    margin: 12px 0 10px 20px;
+    align-items: center;
+}
+
+.date-duration-container{
+    display: flex;
+    margin: 12px 10px 10px 25px;
+}
+
+.release-date,
+.movie-duration{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 150;
+    color: #eee; 
+    margin-right: 14px; 
+}
+
+.calendar-icon{
+    width: 15px;
+    height: 15px; 
+    margin-right: 8px;
+}
+
+.social-media-container{
+    display: inline-block;
+    margin-left: 690px; 
+    vertical-align: top;
+    margin-top: 120px; 
+}
+
+.social-media-icons{
+    float:left;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 10px; 
+}
+
+.fb-icon{
+    background-color: #3b5998;
+}
+
+.twitter-icon{
+    background-color: #5ea9dd;
+}
+
+.pinterest-icon{
+    background-color: #bd081c;
+}
+
+
+
+
+/* .UA-certificate{
+    color:#ccc;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    padding: 4px 2px;
+    font-size: 14px; 
+    
+} */
+
+
+.bottom-cover-section{
+    width: 100%;
+    height: 90px;
+    background-color: #f9f8f8;
+    display: flex;
+}
+
+.ratings-section{
+    margin: auto 0 auto 410px;
+    display: flex;
+}
+
+.total-votes{
+    margin: auto 10px;   
+} 
+
+.full-star{
+    font-size: 26px;
+    color: #333;
+    font-weight:200;
+    display: inline-block;
+    margin-bottom: 5px; 
+}
+
+.full-star svg{
+    vertical-align: bottom;
+}
+
+.votes{
+    font-size: 11px;
+    color: #999;
+    letter-spacing: .5x;
+    margin-top: 5px;
+    font-weight: 150;
+}
+
+.critics-rating{
+    display: flex;
+    flex-flow: column;
+    margin: auto 20px auto 20px;
+}
+
+.ratings{
+    font-size: 18px;
+    color: #333;
+    font-weight:300;
+    margin-bottom: 5px;
+}
+
+.ratings svg{
+    vertical-align: bottom;
+}
+
+.heart-gray{
+	fill: #ddd
+}
+
+.heart-red{
+	fill: #c9363c
+}
+
+.rating-container{
+    margin: auto 10px; 
+}
+
+.rating-display{
+    font-size: 26px;
+    color: #333;
+    font-weight:200;
+    display: inline-block;
+    margin-bottom: 5px; 
+}
+
+#rating-input{
+    display:inline-block;
+}
+
+#rating-input svg{
+    vertical-align: bottom;
+}
+
+#rating-value{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.rateIt-text{
+    font-size: 11px;
+    color: #999;
+    letter-spacing: .5x;
+    font-weight: 150;
+}
+
+.book-button{
+    margin: auto 10px auto 230px;
+    width: 238px;
+}
+
+.book-button a{
+    background-color: #0078ff;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px 60px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 2px; 
+}
+
+.stories-section{
+    margin: 40px 10px 0 0; 
+    flex: 9;
+}
+
+.stories-header{
+    display: flex;
+}
+
+.stories-title{
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+    margin-right: 475px; 
+}
+
+.see-more{
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.stories-content{
+    display: flex;
+    /* justify-content: space-between; */
+    align-content: flex-start;
+    margin-top: 30px; 
+    flex-wrap: wrap; 
+}
+
+.story-card{
+    width: 193px;
+    height: 162px;
+    margin-bottom: 15px; 
+    margin-right: 45px; 
+}
+
+.story-card img{
+    border-radius: 5px; 
+    margin-bottom: 2px;
+}
+.story-title a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #333;
+    line-height: 16px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.story-date{
+    font-size: 12px;
+    margin-top: 7px;
+    color: #999; 
+}
+
+#see-more-content{
+    display: none;
+    align-content: flex-start;
+}
+
+.corporate-button{
+    /* margin: auto 10px auto 230px; */
+    flex:6;
+    margin-top: 40px;
+    margin-left: 25px; 
+}
+
+.corporate-button a{
+    background-color: #fff;
+    color: #0078ff;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px 40px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border: 1px solid #0078ff;
+    border-radius: 2px; 
+    position:relative;
+    left:15px;
+}
+
+.corporate-button a:hover{
+    background-color: #0078ff;
+    color: #fff;
+}
+
+.middle-section{
+    display: flex;
+}
+
+.offers-section{
+    flex:5;
+    margin-top:  200px;
+    margin-left: 10px; 
+}
+
+.tabs-header{
+    margin-top: 20px; 
+    border-bottom: 1px solid gray;
+}
+
+.tabs-header span{
+   color: #666;
+   padding: 12px 8px 12px 0;
+   margin-top: 10px;
+   margin-right: 20px; 
+   margin-bottom: 20px; 
+   font-size: 14px; 
+   line-height: 40px;
+   cursor: pointer;
+}
+
+.tabs-header span.active,
+.tabs-header span:hover{
+    border-bottom: 3px solid #5bc199; 
+    color: #333;
+}

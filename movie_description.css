@@ -368,9 +368,57 @@
 
 .offers-section{
     flex:5;
-    margin-top:  200px;
-    margin-left: 10px; 
+    margin-top:  120px; 
 }
+
+.offers-container{
+    margin-left: 150px;
+}
+
+.offer-heading{
+    margin-top: 25px; 
+    font-size: 14px;
+    font-weight: 700;
+    word-spacing: 1px;
+    line-height: 16px;
+}
+
+.movie-tags span{
+    color: #999;
+    background-color: #eff2f5;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 12px; 
+}
+
+.offer-banner{
+    border: 1px dashed #ccc;
+    padding: 15px 5px 10px 15px;
+    margin: 10px 10px 10px 0;
+    border-radius: 2px;
+}
+
+.offer-banner img{
+    height: 30px;
+    width: 30px;
+}
+
+.offer-banner-details{
+    display: inline-block;
+}
+
+.offer-banner-header{
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px;
+}
+
+.offer-banner-body{
+    font-size: 12px;
+    color: #666;
+    padding: 2px;
+}
+
 
 .tabs-header{
     margin-top: 20px; 
@@ -392,4 +440,41 @@
 .tabs-header span:hover{
     border-bottom: 3px solid #5bc199; 
     color: #333;
+}
+
+.summary-heading{
+    margin-top: 50px; 
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.summary-content{
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 22px;
+   color: #666;
+}
+
+.report-section{
+    margin: 20px 0 20px 140px;
+    font-size: 11px;
+}
+
+.report-section a{
+    color: #939394;
+    text-decoration: none; 
+}
+
+.report-section ul{
+    list-style: none;
+    text-align: left;
+    margin: 10px 0; 
+}
+
+.report-section li{
+    display: inline;
+}
+
+.report-section span{
+    color: #939394;
 }

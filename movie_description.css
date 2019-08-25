@@ -393,18 +393,23 @@
 
 .offer-banner{
     border: 1px dashed #ccc;
-    padding: 15px 5px 10px 15px;
-    margin: 10px 10px 10px 0;
+    padding: 15px 5px 20px 15px;
+    margin: 10px 15px 15px 0;
     border-radius: 2px;
+    display: flex;
 }
 
 .offer-banner img{
     height: 30px;
     width: 30px;
+    min-width: 30px;
+    min-height: 30px;
 }
 
 .offer-banner-details{
     display: inline-block;
+    margin-left:5px;
+    margin-right: 2px;
 }
 
 .offer-banner-header{

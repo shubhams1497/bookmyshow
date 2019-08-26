@@ -1,0 +1,211 @@
+.top-header{
+    width:100%;
+    height: 65px;
+    background-color: #1f2533;  
+    margin: 0;
+    display: flex;
+}
+
+.top-header-container{
+    width: 100%;
+    margin: auto 10px;
+}
+
+.top-header-container .left-align-content{
+    float: left;
+}
+
+.top-header-container .back-icon{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px; 
+}
+
+.top-header-container .show-details{
+    display: inline-block;
+    margin-left: 10px; 
+}
+
+.show-details a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 150;
+}
+
+.show-details a:hover{
+    text-decoration: underline;
+}
+
+.show-details p{
+    color: #c6c6c9;
+    font-size: 12px;
+    font-weight: 150;
+    margin-top: 10px;
+}
+
+.show-details #icon-u{
+    vertical-align: middle;
+}
+
+.right-align-content{
+    float: right;
+    margin-top: 12px;
+    margin-right: 10px; 
+}
+
+
+.right-align-content .no_of_seat,
+.right-align-content .close-icon{
+    display: inline-block;
+}
+
+.no_of_seat{
+    position: relative;
+    margin: 0 45px;
+    width: 80px;
+    text-align: center;
+    color: #fff; 
+    cursor: pointer;
+}
+
+.no_of_seat ul::before{
+    content: "";
+    position: absolute;
+    top:-8px;
+    left:32px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom:  8px solid #1f2533;
+}
+
+.no_of_seat ul li{
+    padding: 4px 0; 
+    background-color: #eee; 
+    border-bottom: 1px solid #ccc;
+}
+
+.no_of_seat ul li:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+
+#no_seat_list{
+    transition: all .2s ease;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+
+.no_of_seat ul{
+    position: absolute;
+    top:100%;
+    margin-top: 30px; 
+    z-index: 100;
+    border: 2px solid #1f2533;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+    color: #1f2533;
+}
+
+
+.date-header{
+    height: 45px;
+    background-color: #f6f6f6;  
+    margin: 0;
+    display: flex;
+    font-size: 12px;
+    padding: 5px 45px;
+}
+
+
+.seat-layout{
+    /* width: 600px; */
+    min-width: 400px;
+    max-width: 1000px;
+    width:600px;
+    /* max-height: 600px; */
+    margin: 30px auto;
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.row-type .row-heading{
+    border-bottom: 1px solid #ccc;
+    color: #bbb;
+    padding-bottom: 10px; 
+    margin: 10px 0; 
+}
+
+.seat-matrix{
+    display: flex;
+    flex-flow: column-reverse; 
+}
+
+.row,
+.seats{
+    display: flex;
+}
+
+.row{
+    margin: 5px 0;
+}
+
+.row-type{
+    margin-bottom: 20px;
+}
+
+.row .row-name {
+    color: #ccc;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+}
+
+.seats{
+    flex-flow: row-reverse;
+}
+
+.single-seat{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height:20px;
+    width: 20px;
+    text-align: center;
+    margin-left: 10px;
+    color: #aaa;
+    font-size: 12px;
+    padding: 1px;
+    cursor: pointer;
+}
+
+
+.empty-seat{
+    border: 1px solid transparent;
+    border-radius: 2px;
+    height:20px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.booked-seat{
+    background-color: #aaa;
+    color: #eee; 
+    border-radius: 5px;
+    height:20px;
+    width: 20px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 12px;
+    padding: 1px;
+}
+
+
+.single-seat:hover{
+    background-color: green;
+    color: #fff;
+}

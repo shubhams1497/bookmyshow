@@ -125,9 +125,9 @@
 
 .seat-layout{
     /* width: 600px; */
-    min-width: 400px;
-    max-width: 1000px;
-    width:600px;
+    /* min-width: 400px;
+    max-width: 1000px; */
+    width: 800px;
     /* max-height: 600px; */
     margin: 30px auto;
     display: flex;
@@ -190,11 +190,13 @@
     height:20px;
     width: 20px;
     margin-left: 10px;
+    padding: 1px;
 }
 
 .booked-seat{
     background-color: #aaa;
     color: #eee; 
+    border: 1px solid #ccc;
     border-radius: 5px;
     height:20px;
     width: 20px;
@@ -202,6 +204,20 @@
     margin-left: 10px;
     font-size: 12px;
     padding: 1px;
+}
+
+.selected-seat{
+    background-color: green;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height:20px;
+    width: 20px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 12px;
+    padding: 1px;
+    cursor: pointer;
 }
 
 

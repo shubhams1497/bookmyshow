@@ -1,4 +1,5 @@
 
+// This script renders the cinema layout
 
 
 function createRowType(rowHeading, seatMatrix) {
@@ -18,22 +19,62 @@ function createRowHeading(heading) {
     return div;
 }
 
-
-
-
-function createSeat(seatType,seatNumber = 0){
+function createSeat(seatType,seatId,seatNumber = 0){
     seat = document.createElement('div');
     seat.setAttribute('class',seatType);
+    seat.setAttribute('id',seatId);
+    //console.log(seatId);
     if(seatNumber != 0) {
         seat.textContent = seatNumber;
     }
     return seat;
 }
 
+function createSeatRows1(seats,rowName)
+{
+    for(let i=1;i<=8;i++)
+    {
+        seats.appendChild(createSeat('single-seat', rowName+i,i));
+    }
+
+    seats.appendChild(createSeat('empty-seat',rowName+9));
+    seats.appendChild(createSeat('empty-seat',rowName+10));
+
+    for(let i=11;i<=18;i++)
+    {
+        seats.appendChild(createSeat('single-seat', rowName+i, i-2));
+    }
+    return seats;
+}
+
+function createSeatRows2(seats,rowName)
+{
+    for(let i=1;i<=18;i++)
+    {
+        seats.appendChild(createSeat('single-seat', rowName+i,i));
+    }
+
+    return seats;
+}
+
+function createSeatRows3(seats,rowName)
+{
+    seats.appendChild(createSeat('empty-seat',rowName+1));
+    seats.appendChild(createSeat('empty-seat',rowName+2));
+    for(let i=3;i<=18;i++)
+    {
+        seats.appendChild(createSeat('single-seat', rowName+i,i-2));
+    }
+
+    return seats;
+}
+
+
 function createRow(rowName)
 {
     row = document.createElement('div');
     row.setAttribute('class','row');
+   
     txt = document.createElement('div');
     txt.setAttribute('class','row-name');
     txt.textContent = rowName;
@@ -41,20 +82,15 @@ function createRow(rowName)
     seats = document.createElement('div');
     seats.setAttribute('class','seats');
 
-    seats.appendChild(createSeat('single-seat',1));
-    seats.appendChild(createSeat('single-seat',2));
-    seats.appendChild(createSeat('single-seat',3));
-    seats.appendChild(createSeat('single-seat',4));
-    seats.appendChild(createSeat('single-seat',5));
-    seats.appendChild(createSeat('booked-seat',6));
-    seats.appendChild(createSeat('empty-seat'));
-    seats.appendChild(createSeat('empty-seat'));
-    seats.appendChild(createSeat('single-seat',7));
-    seats.appendChild(createSeat('single-seat',8));
-    seats.appendChild(createSeat('single-seat',9));
-    seats.appendChild(createSeat('single-seat',10));
-    seats.appendChild(createSeat('single-seat',11));
-    seats.appendChild(createSeat('single-seat',12));
+    if(rowName == 'H' || rowName == "I" || rowName == 'C') {
+        seats = createSeatRows2(seats,rowName);
+    }
+    else if(rowName == 'A' || rowName == 'B') {
+        seats = createSeatRows3(seats,rowName);
+    } 
+    else{ 
+        seats = createSeatRows1(seats,rowName);
+    }
 
     row.appendChild(txt);
     row.appendChild(seats);
@@ -62,55 +98,73 @@ function createRow(rowName)
     return row;
 }
 
-// row-type 1
-
-let seatMatrix = document.createElement('div');
-seatMatrix.setAttribute('class','seat-matrix');
-
-seatMatrix.appendChild(createRow('A'));
-seatMatrix.appendChild(createRow('B'));
-seatMatrix.appendChild(createRow('C'));
-
-let rowType1 = createRowType(createRowHeading("Normal"),seatMatrix);
-
-// another-row type 2
-
-seatMatrix = document.createElement('div');
-seatMatrix.setAttribute('class','seat-matrix');
-
-seatMatrix.appendChild(createRow('D'));
-seatMatrix.appendChild(createRow('E'));
-seatMatrix.appendChild(createRow('F'));
-
-
-let rowType2 = createRowType(createRowHeading("Executive"),seatMatrix);
-
-// row-type 3
-
-seatMatrix = document.createElement('div');
-seatMatrix.setAttribute('class','seat-matrix');
-
-seatMatrix.appendChild(createRow('G'));
-seatMatrix.appendChild(createRow('H'));
-seatMatrix.appendChild(createRow('I'));
-
-
-let rowType3 = createRowType(createRowHeading("Premium"),seatMatrix);
 
 
 
 
 
-let cinemaLayoutDiv = document.getElementById("cinema-structure");
+//array of id of booked seats by other users
 
-cinemaLayoutDiv.appendChild(rowType1);
-cinemaLayoutDiv.appendChild(rowType2);
-cinemaLayoutDiv.appendChild(rowType3);
+let bookedSeats = ['A12','B13','B6','E3','E4','H12','H11'];
 
 
+function renderCinemaLayout(){
+
+    // row-type 1
+
+    let seatMatrix = document.createElement('div');
+    seatMatrix.setAttribute('class','seat-matrix');
+
+    seatMatrix.appendChild(createRow('A'));
+    seatMatrix.appendChild(createRow('B'));
+    seatMatrix.appendChild(createRow('C'));
+
+    let rowType1 = createRowType(createRowHeading("Normal"),seatMatrix);
+
+    // another-row type 2
+
+    seatMatrix = document.createElement('div');
+    seatMatrix.setAttribute('class','seat-matrix');
+
+    seatMatrix.appendChild(createRow('D'));
+    seatMatrix.appendChild(createRow('E'));
+    seatMatrix.appendChild(createRow('F'));
 
 
+    let rowType2 = createRowType(createRowHeading("Executive"),seatMatrix);
 
+    // another row-type 3
+
+    seatMatrix = document.createElement('div');
+    seatMatrix.setAttribute('class','seat-matrix');
+
+    seatMatrix.appendChild(createRow('G'));
+    seatMatrix.appendChild(createRow('H'));
+    seatMatrix.appendChild(createRow('I'));
+
+
+    let rowType3 = createRowType(createRowHeading("Premium"),seatMatrix);
+
+    let cinemaLayoutDiv = document.getElementById("cinema-structure");
+
+    cinemaLayoutDiv.appendChild(rowType1);
+    cinemaLayoutDiv.appendChild(rowType2);
+    cinemaLayoutDiv.appendChild(rowType3);
+
+
+     // before rendering render booked seat in the cinema
+    // provided in the array
+
+    for(let i=0;i<bookedSeats.length;i++)
+    {
+        let seat = document.getElementById(bookedSeats[i]);
+        seat.classList.remove('single-seat');
+        seat.classList.add('booked-seat');
+    }
+}
+
+
+renderCinemaLayout();
 
 
 {/* <div class="row-type">

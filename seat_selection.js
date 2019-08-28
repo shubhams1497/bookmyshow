@@ -56,6 +56,10 @@ function selectSeat(seatId) {
     document.getElementById(seatId).classList.add('selected-seat');
     noOfSelectedSeats++;
     selectedSeatsList.push(seatId);
+
+    if(noOfSelectedSeats == noOfSeats) {
+        document.getElementById('book-button-1').style.transform = "scaleY(1)";
+    }
 }
 
 function nextSeat(seatId)
@@ -79,6 +83,7 @@ function performSeatSelection(seatId){
 
 
 function resetSeatSelection() {
+    document.getElementById('book-button-1').style.transform = "scaleY(0)";
     noOfSelectedSeats = 0;
     for(seatid of selectedSeatsList) {
         document.getElementById(seatid).classList.remove('selected-seat');

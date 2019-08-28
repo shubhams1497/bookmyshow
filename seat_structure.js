@@ -2,6 +2,12 @@
 // This script renders the cinema layout
 
 
+
+//array of id of booked seats by other users
+
+let bookedSeats = ['A12','B13','B6','E3','E4','H12','H11','I9','F15'];
+
+
 function createRowType(rowHeading, seatMatrix) {
     div = document.createElement('div');
     div.setAttribute('class', 'row-type');
@@ -103,9 +109,7 @@ function createRow(rowName)
 
 
 
-//array of id of booked seats by other users
 
-let bookedSeats = ['A12','B13','B6','E3','E4','H12','H11'];
 
 
 function renderCinemaLayout(){

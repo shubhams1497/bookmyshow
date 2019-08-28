@@ -20,6 +20,10 @@ body {
     color:#fff;
 }
 
+
+
+
+
 .details-left-content{
     float: left;
 }
@@ -370,6 +374,7 @@ body {
     border-radius: 50%;
     background-color: #ffc610;
     display: inline-block;
+    margin-right: 5px;
 }
 
 .cinema-name a{
@@ -441,4 +446,20 @@ body {
 .search-container #icon-cancel{
     /* width: 18px; */
     width: 0;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .movie-details-container{
+      width: 95%;
+    }
+
+    .cinema-list-container{
+        width: 100%;
+    }
+
+    .filter-wrapper{
+        width: 90%;
+    }
+
 }

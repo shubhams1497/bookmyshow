@@ -39,8 +39,9 @@ function expand_seat_list(e){
 document.getElementById('seat_list_div').addEventListener('click',expand_seat_list);
 
 document.getElementById('cinema-structure').addEventListener('click',function(e) {
+    console.log(e.target.id);
     if(e.target.classList.contains('single-seat') || e.target.classList.contains('selected-seat')){
-        //console.log(e.target.id);
+        
         performSeatSelection(e.target.id);
     }
 });
@@ -56,6 +57,7 @@ function selectSeat(seatId) {
     document.getElementById(seatId).classList.add('selected-seat');
     noOfSelectedSeats++;
     selectedSeatsList.push(seatId);
+
 
     if(noOfSelectedSeats == noOfSeats) {
         document.getElementById('book-button-1').style.transform = "scaleY(1)";

@@ -1,4 +1,5 @@
 # bookmyshow
 bookmyshow for practice
 
-#Check Demo here [link](https://shubhams1497.github.io/bookmyshow/)
+# Demo 
+check here [link](https://shubhams1497.github.io/bookmyshow/)
